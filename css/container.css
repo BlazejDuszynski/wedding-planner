@@ -1,0 +1,102 @@
+.container {
+    max-width: 900px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+}
+
+.section {
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0;
+    border-bottom-color: #ddd;
+    padding: 5px;
+}
+
+.section__header {
+    font-size: 20px;
+    margin: 0px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section__body {
+    padding: 20px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__input {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form__button {
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: teal;
+}
+
+.form__button:hover {   
+    background-color: rgb(2, 109, 109);
+}
+
+.form__button:active {   
+    background-color: rgb(2, 85, 85);
+}
+
+.tasks {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.tasks__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tasks__button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+}
+
+.tasks__button--done {
+    background-color: rgb(3, 165, 3);
+}
+
+.tasks__button--done:hover {
+    background-color: rgb(2, 136, 2);
+}
+
+.tasks__button--remove {
+    background-color: rgb(218, 3, 3);
+    background-image: url("../img/bin.png");
+}
+
+.tasks__button--remove:hover {
+    background-color: rgb(167, 2, 2);
+}
+
+.task--done {
+    text-decoration: line-through;
+}
