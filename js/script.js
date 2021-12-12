@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let HideDoneTasks = false;
 
     const AddNewTask = (newTaskContent) => {
 
@@ -27,6 +28,20 @@
 
         render();
 
+    };
+
+    const markAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+
+        render();
+    };
+
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render ();
     };
 
     const bindEvents = () => {
