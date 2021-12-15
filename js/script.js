@@ -17,14 +17,7 @@
     }
 
     const toggleTaskDone = (index) => {
-        taksk = [
-            ...tasks.slice(0, index),
-            {
-                ...tasks[index],
-                done: !tasks[index].done,
-            },
-            ...tasks.slice(index + 1),
-        ];
+        tasks = tasks.map ((task, taskIndex) => (taskIndex === index) ? ({...task, done: !task.done}) : ({...task}));
 
         render();
 
@@ -72,8 +65,9 @@
                 ${task.done ? "✔️" : ""}
                 </button>
                 <span 
-                class="task"${task.done ? "task--done" : ""}"
-                >${task.content}</span>
+                class="${task.done ? "task--done" : ""}">
+                ${task.content}
+                </span>
                 <button class="tasks__button tasks__button--remove">🗑</button>
             </li>
             `;
@@ -102,6 +96,7 @@
         const form = document.querySelector(".form");
 
         form.addEventListener("submit", onFormSubmit);
+
     };
 
     init();
