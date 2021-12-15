@@ -20,6 +20,9 @@
     margin: 0px;
     padding: 20px;
     border-bottom: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 20px;
 }
 
 .section__body {
@@ -99,4 +102,15 @@
 
 .task--done {
     text-decoration: line-through;
+}
+
+.section__buttons {
+    border: none;
+    background: none;
+    font-family: 'Lato', sans-serif;
+    color: teal;
+}
+
+.section__buttons:hover {
+    color: rgb(6, 172, 172)
 }
