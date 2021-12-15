@@ -17,7 +17,7 @@
     }
 
     const toggleTaskDone = (index) => {
-        tasks = tasks.map((task, taskIndex) => (taskIndex === index) ? ({ ...task, done: !task.done }) : ({ ...task }));
+        tasks = tasks.map ((task, taskIndex) => (taskIndex === index) ? ({...task, done: !task.done}) : ({...task}));
 
         render();
 
@@ -30,14 +30,6 @@
         }));
 
         render();
-    };
-
-    const bindButtonEvents = () => {
-        const markAllTasksDoneButton = document.querySelector(".section__buttons--markAllTasksDone");
-
-        markAllTasksDoneButton.addEventListener("click", () => {
-            markAllTasksDone();
-        });
     };
 
     const toggleHideDoneTasks = () => {
@@ -100,7 +92,6 @@
 
     const init = () => {
         render();
-        bindButtonEvents();
 
         const form = document.querySelector(".form");
 
