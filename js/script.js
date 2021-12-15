@@ -41,7 +41,7 @@
 
     const toggleHideDoneTasks = () => {
         hideDoneTasks = !hideDoneTasks;
-        render ();
+        render();
     };
 
     const bindEvents = () => {
@@ -84,22 +84,24 @@
         bindEvents();
     };
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const newTaskContent = document.querySelector(".js__newTask").value.trim();
+
+        if (newTaskContent === "") {
+            return;
+        }
+
+        AddNewTask(newTaskContent);
+    };
+
     const init = () => {
         render();
 
         const form = document.querySelector(".form");
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
 
-            const newTaskContent = document.querySelector(".js__newTask").value.trim();
-
-            if (newTaskContent === "") {
-                return;
-            }
-
-            AddNewTask(newTaskContent);
-            render();
-        })
+        form.addEventListener("submit", onFormSubmit);
     };
 
     init();
