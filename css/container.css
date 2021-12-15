@@ -126,7 +126,7 @@
     color: rgb(6, 172, 172)
 }
 
-.section__buttons--hideAllTasksDone {
+section__buttons--hideAllTasksDone {
     border: none;
     background: none;
     font-family: 'Lato', sans-serif;
