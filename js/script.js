@@ -79,9 +79,20 @@
     };
 
     const renderButtons = () => {
-        const buttonsElement = document.querySelector(".section__buttonsElement");
+        let buttonsElement = document.querySelector(".section__buttonsElement");
         
-    }
+        if (!tasks.length) {
+            buttonsElement.innerHTML = "";
+            return;
+        }
+            buttonsElement.innerHTML = `<button class="section__buttons">
+            Ukończ wszystkie zadania
+            </button>
+            <button class="section__buttons">
+            Usuń ukończone zadania
+            </button>
+            `;
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
