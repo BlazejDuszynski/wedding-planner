@@ -78,6 +78,11 @@
         bindEvents();
     };
 
+    const renderButtons = () => {
+        const buttonsElement = document.querySelector(".section__buttonsElement");
+        
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -92,6 +97,7 @@
 
     const init = () => {
         render();
+        renderButtons();
 
         const form = document.querySelector(".form");
 
